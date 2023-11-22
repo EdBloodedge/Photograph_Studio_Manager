@@ -20,7 +20,14 @@ namespace Poyecto_estudio
 
         private void buttonOrder_Click(object sender, EventArgs e)
         {
-            
+            FormOrder formOrder = new FormOrder();
+            formOrder.ShowDialog();
+        }
+
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+            FormHistory formHistory = new FormHistory();
+            formHistory.ShowDialog();
         }
     }
 }

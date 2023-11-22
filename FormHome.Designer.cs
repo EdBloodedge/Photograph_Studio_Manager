@@ -47,6 +47,7 @@
             this.buttonHistory.TabIndex = 2;
             this.buttonHistory.Text = "Ver historial de ordenes";
             this.buttonHistory.UseVisualStyleBackColor = false;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // buttonOrder
             // 
@@ -88,7 +89,6 @@
             this.Controls.Add(this.buttonReviews);
             this.Controls.Add(this.buttonOrder);
             this.Controls.Add(this.buttonHistory);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormHome";
             this.Text = "HOME";
             this.ResumeLayout(false);

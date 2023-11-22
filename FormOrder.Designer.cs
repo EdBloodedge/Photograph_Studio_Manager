@@ -28,15 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(130, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
             // 
             // FormOrder
             // 
@@ -44,16 +36,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1043, 559);
-            this.Controls.Add(this.textBox1);
             this.Name = "FormOrder";
-            this.Text = "formOrfer";
+            this.Text = "Orden";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
