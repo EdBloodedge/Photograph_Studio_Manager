@@ -15,17 +15,6 @@ namespace Poyecto_estudio
         public FormOrder()
         {
             InitializeComponent();
-            //panelDetails.Hide();
-        }
-
-        private void buttonBoda_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-          
         }
     }
 }

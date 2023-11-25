@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Poyecto_estudio
 {
-    public partial class FormOrder : Form
+    public partial class FReviews : Form
     {
-        public FormOrder()
+        public FReviews()
         {
             InitializeComponent();
-            //panelDetails.Hide();
-        }
-
-        private void buttonBoda_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-          
         }
     }
 }

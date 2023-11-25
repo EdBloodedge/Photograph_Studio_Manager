@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace Poyecto_estudio
 {
-    public partial class FormHistory : Form
+    public partial class FHistory : Form
     {
-        public FormHistory()
+        public FHistory()
         {
             InitializeComponent();
             dataGridViewOrder.Hide();
@@ -81,10 +81,9 @@ namespace Poyecto_estudio
 
                     }
 
+
                     connection.Close();
-
                 }
-
                 catch(Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
