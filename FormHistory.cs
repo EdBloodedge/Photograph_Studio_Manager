@@ -13,10 +13,16 @@ namespace Poyecto_estudio
 {
     public partial class FormHistory : Form
     {
-        public FormHistory()
+        bool admin;
+        public FormHistory(bool admin)
         {
             InitializeComponent();
             dataGridViewOrder.Hide();
+            this.admin = admin;
+            if(admin) 
+            {
+                radioButtonAll.Visible = true;
+            }
         }
 
         //Al dar click al boton que dice BUSCAR
@@ -31,24 +37,42 @@ namespace Poyecto_estudio
                 try
                 {
 
+                    string query;
+
                     //Se abre la conexion
                     connection.Open();
 
-                    string query;
-
-                    if(radioButtonOrderNumber.Checked)
+                    if (admin)
                     {
+                        query = "SELECT id AS Orden, nombre_cliente AS Cliente, paquete AS Paquete, cantidad_fotos AS Fotos, " +
+                        "sesion_enviada AS Entregado, horario AS Fecha, contacto AS Telefono FROM fotografia ";
+
+                    } else
+                    {
+                        
+                        query = "SELECT id AS Orden, paquete AS Paquete, cantidad_fotos AS Fotos, " +
+                        "sesion_enviada AS Entregado, horario AS Fecha FROM fotografia ";
+                    }
+            
+
+                    if (radioButtonOrderNumber.Checked)
+                    {
+
                         //Un string que sera el query para buscar en la base de datos. Toma los datos de la tabla history cuando el numero de orden coincida con el que esta en el textbox
-                        query = "SELECT * FROM history WHERE order_number = " + textBoxOrderNumber.Text;
+                        query += "WHERE id = " + textBoxOrderNumber.Text;
 
                     }
                     else if(radioButtonCustomerName.Checked) 
                     { 
                         //Un string que toma los datos de la tabla history cuando el nombre de cliente coincida
-                        query = "SELECT * FROM history WHERE customer = '" + textBoxOrderNumber.Text + "'";
+                        query += "WHERE nombre_cliente = '" + textBoxOrderNumber.Text + "'";
 
                     }
-                    else
+                    else if (radioButton1.Checked)
+                    {
+                        query += "WHERE contacto = '" + textBoxOrderNumber.Text + "'";
+                    }
+                    else if(!radioButtonAll.Checked)
                     {
                         MessageBox.Show("Por favor selecciona una opción");
                         return;
