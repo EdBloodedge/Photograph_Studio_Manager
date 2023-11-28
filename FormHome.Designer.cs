@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panelWindowTop = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.buttonAdmin = new System.Windows.Forms.Button();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +96,7 @@
             // panelButtons
             // 
             this.panelButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(122)))));
+            this.panelButtons.Controls.Add(this.buttonAdmin);
             this.panelButtons.Controls.Add(this.buttonReviews);
             this.panelButtons.Controls.Add(this.buttonHistory);
             this.panelButtons.Controls.Add(this.buttonOrder);
@@ -121,6 +123,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "¡Conócenos!";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelWindowTop
             // 
@@ -139,6 +142,23 @@
             this.panelDesktop.Size = new System.Drawing.Size(1012, 606);
             this.panelDesktop.TabIndex = 7;
             // 
+            // buttonAdmin
+            // 
+            this.buttonAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(94)))), ((int)(((byte)(122)))));
+            this.buttonAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAdmin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonAdmin.FlatAppearance.BorderColor = System.Drawing.Color.GreenYellow;
+            this.buttonAdmin.FlatAppearance.BorderSize = 0;
+            this.buttonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdmin.Font = new System.Drawing.Font("Lucida Sans Unicode", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonAdmin.Location = new System.Drawing.Point(0, 506);
+            this.buttonAdmin.Name = "buttonAdmin";
+            this.buttonAdmin.Size = new System.Drawing.Size(250, 100);
+            this.buttonAdmin.TabIndex = 6;
+            this.buttonAdmin.Text = "Administrar";
+            this.buttonAdmin.UseVisualStyleBackColor = false;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -148,6 +168,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelWindowTop);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "FormHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HOME";
@@ -164,6 +185,7 @@
         private System.Windows.Forms.Panel panelWindowTop;
         private System.Windows.Forms.Panel panelDesktop;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAdmin;
     }
 }
 

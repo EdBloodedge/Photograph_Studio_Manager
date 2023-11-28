@@ -38,15 +38,21 @@ namespace Poyecto_estudio
 
                     if(radioButtonOrderNumber.Checked)
                     {
+
                         //Un string que sera el query para buscar en la base de datos. Toma los datos de la tabla history cuando el numero de orden coincida con el que esta en el textbox
-                        query = "SELECT * FROM history WHERE order_number = " + textBoxOrderNumber.Text;
+                        query = "SELECT id AS Orden, nombre_cliente AS Cliente, paquete AS Paquete, cantidad_fotos AS Fotos, " +
+                            "sesion_enviada AS Entregado, horario AS Fecha, contacto AS Telefono FROM fotografia WHERE id = " + textBoxOrderNumber.Text;
 
                     }
                     else if(radioButtonCustomerName.Checked) 
                     { 
                         //Un string que toma los datos de la tabla history cuando el nombre de cliente coincida
-                        query = "SELECT * FROM history WHERE customer = '" + textBoxOrderNumber.Text + "'";
+                        query = "SELECT * FROM fotografia WHERE nombre_cliente = '" + textBoxOrderNumber.Text + "'";
 
+                    }
+                    else if (radioButton1.Checked)
+                    {
+                        query = "SELECT * FROM fotografia WHERE contacto = '" + textBoxOrderNumber.Text + "'";
                     }
                     else
                     {

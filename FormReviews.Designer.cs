@@ -41,9 +41,10 @@
             this.pictureBox3Stars = new System.Windows.Forms.PictureBox();
             this.pictureBox2Stars = new System.Windows.Forms.PictureBox();
             this.buttonSend = new System.Windows.Forms.Button();
-            this.maskedTextBoxOrderNumber = new System.Windows.Forms.MaskedTextBox();
-            this.labelOrderNumber = new System.Windows.Forms.Label();
+            this.labelNumber = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxNumber = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTurnedOffStar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLightedStar)).BeginInit();
@@ -99,9 +100,9 @@
             // 
             // textBoxReview
             // 
-            this.textBoxReview.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxReview.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxReview.Location = new System.Drawing.Point(177, 442);
+            this.textBoxReview.Location = new System.Drawing.Point(177, 509);
             this.textBoxReview.MaxLength = 200;
             this.textBoxReview.Multiline = true;
             this.textBoxReview.Name = "textBoxReview";
@@ -123,7 +124,7 @@
             // 
             // tableLayoutPanelStars
             // 
-            this.tableLayoutPanelStars.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanelStars.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tableLayoutPanelStars.ColumnCount = 5;
             this.tableLayoutPanelStars.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelStars.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -135,7 +136,7 @@
             this.tableLayoutPanelStars.Controls.Add(this.pictureBox3Stars, 2, 0);
             this.tableLayoutPanelStars.Controls.Add(this.pictureBox2Stars, 1, 0);
             this.tableLayoutPanelStars.Controls.Add(this.pictureBox1Star, 0, 0);
-            this.tableLayoutPanelStars.Location = new System.Drawing.Point(177, 390);
+            this.tableLayoutPanelStars.Location = new System.Drawing.Point(557, 460);
             this.tableLayoutPanelStars.Name = "tableLayoutPanelStars";
             this.tableLayoutPanelStars.RowCount = 1;
             this.tableLayoutPanelStars.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -196,47 +197,55 @@
             // 
             // buttonSend
             // 
-            this.buttonSend.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonSend.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSend.Location = new System.Drawing.Point(880, 393);
+            this.buttonSend.Location = new System.Drawing.Point(880, 460);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(102, 43);
             this.buttonSend.TabIndex = 5;
             this.buttonSend.Text = "Enviar";
             this.buttonSend.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBoxOrderNumber
+            // labelNumber
             // 
-            this.maskedTextBoxOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.maskedTextBoxOrderNumber.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.maskedTextBoxOrderNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBoxOrderNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBoxOrderNumber.Location = new System.Drawing.Point(369, 354);
-            this.maskedTextBoxOrderNumber.Mask = "000000";
-            this.maskedTextBoxOrderNumber.Name = "maskedTextBoxOrderNumber";
-            this.maskedTextBoxOrderNumber.Size = new System.Drawing.Size(125, 30);
-            this.maskedTextBoxOrderNumber.TabIndex = 6;
-            // 
-            // labelOrderNumber
-            // 
-            this.labelOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelOrderNumber.AutoSize = true;
-            this.labelOrderNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrderNumber.Location = new System.Drawing.Point(175, 354);
-            this.labelOrderNumber.Name = "labelOrderNumber";
-            this.labelOrderNumber.Size = new System.Drawing.Size(174, 25);
-            this.labelOrderNumber.TabIndex = 7;
-            this.labelOrderNumber.Text = "Número de orden: ";
+            this.labelNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumber.Location = new System.Drawing.Point(180, 478);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(108, 25);
+            this.labelNumber.TabIndex = 7;
+            this.labelNumber.Text = "No. Orden:";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 136);
+            this.label1.Location = new System.Drawing.Point(172, 432);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(466, 25);
+            this.label1.Size = new System.Drawing.Size(368, 25);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Estamos ansiosos por conocer tu opinion bla bla bla.";
+            this.label1.Text = "Estamos ansiosos por conocer tu opinión";
+            // 
+            // textBoxNumber
+            // 
+            this.textBoxNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumber.Location = new System.Drawing.Point(294, 475);
+            this.textBoxNumber.Name = "textBoxNumber";
+            this.textBoxNumber.Size = new System.Drawing.Size(260, 30);
+            this.textBoxNumber.TabIndex = 9;
+            // 
+            // listBox1
+            // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(177, 106);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(805, 308);
+            this.listBox1.TabIndex = 11;
             // 
             // FormReviews
             // 
@@ -244,9 +253,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(1182, 673);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.textBoxNumber);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelOrderNumber);
-            this.Controls.Add(this.maskedTextBoxOrderNumber);
+            this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.tableLayoutPanelStars);
             this.Controls.Add(this.textBoxReview);
@@ -284,8 +294,9 @@
         private System.Windows.Forms.PictureBox pictureBoxLightedStar;
         private System.Windows.Forms.PictureBox pictureBoxTurnedOffStar;
         private System.Windows.Forms.Button buttonSend;
-        private System.Windows.Forms.MaskedTextBox maskedTextBoxOrderNumber;
-        private System.Windows.Forms.Label labelOrderNumber;
+        private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxNumber;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

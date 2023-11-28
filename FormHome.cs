@@ -62,5 +62,10 @@ namespace Poyecto_estudio
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormAboutUs formAboutUs = new FormAboutUs();
+            OpenChildForm(formAboutUs);
+        }
     }
 }
