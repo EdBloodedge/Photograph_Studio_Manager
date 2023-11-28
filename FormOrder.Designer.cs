@@ -188,7 +188,7 @@
             this.maskedTextBoxNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.maskedTextBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskedTextBoxNumber.Location = new System.Drawing.Point(354, 476);
-            this.maskedTextBoxNumber.Mask = "00 0000 0000";
+            this.maskedTextBoxNumber.Mask = "0000000000";
             this.maskedTextBoxNumber.Name = "maskedTextBoxNumber";
             this.maskedTextBoxNumber.Size = new System.Drawing.Size(140, 30);
             this.maskedTextBoxNumber.TabIndex = 12;
@@ -329,6 +329,7 @@
             // 
             // panelFamiliar
             // 
+            this.panelFamiliar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFamiliar.BackgroundImage")));
             this.panelFamiliar.Location = new System.Drawing.Point(465, 167);
             this.panelFamiliar.Name = "panelFamiliar";
             this.panelFamiliar.Size = new System.Drawing.Size(29, 19);

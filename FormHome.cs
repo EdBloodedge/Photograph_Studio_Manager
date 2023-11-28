@@ -13,10 +13,12 @@ namespace Poyecto_estudio
     public partial class FormHome : Form
     {
         Form childForm;
+        bool admin;
 
         public FormHome()
         {
             InitializeComponent();
+            admin = false;
             
         }
 
@@ -30,7 +32,7 @@ namespace Poyecto_estudio
         private void buttonHistory_Click(object sender, EventArgs e)
         {
 
-            FormHistory formHistory = new FormHistory();
+            FormHistory formHistory = new FormHistory(admin);
             OpenChildForm(formHistory);
             
         }
@@ -66,6 +68,22 @@ namespace Poyecto_estudio
         {
             FormAboutUs formAboutUs = new FormAboutUs();
             OpenChildForm(formAboutUs);
+        }
+
+        private void buttonAdmin_Click(object sender, EventArgs e)
+        {
+            if(childForm != null) { childForm.Close(); }
+
+            if (!admin)
+            {
+                admin = true;
+                buttonAdmin.Text = "Salir Admin";
+            }
+            else
+            {
+                admin = false;
+                buttonAdmin.Text = "Administrar";
+            }
         }
     }
 }

@@ -158,6 +158,7 @@
             this.buttonAdmin.TabIndex = 6;
             this.buttonAdmin.Text = "Administrar";
             this.buttonAdmin.UseVisualStyleBackColor = false;
+            this.buttonAdmin.Click += new System.EventHandler(this.buttonAdmin_Click);
             // 
             // FormHome
             // 

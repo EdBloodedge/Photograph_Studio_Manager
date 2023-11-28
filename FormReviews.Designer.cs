@@ -43,8 +43,11 @@
             this.buttonSend = new System.Windows.Forms.Button();
             this.labelNumber = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNumber = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeaderRate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderReview = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTurnedOffStar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLightedStar)).BeginInit();
@@ -54,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4Stars)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Stars)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Stars)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelRateUs
@@ -61,6 +65,7 @@
             this.labelRateUs.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelRateUs.AutoSize = true;
             this.labelRateUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRateUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.labelRateUs.Location = new System.Drawing.Point(172, 38);
             this.labelRateUs.Name = "labelRateUs";
             this.labelRateUs.Size = new System.Drawing.Size(810, 29);
@@ -69,6 +74,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(47)))), ((int)(((byte)(61)))));
             this.panel1.Controls.Add(this.pictureBoxTurnedOffStar);
             this.panel1.Controls.Add(this.pictureBoxLightedStar);
             this.panel1.Controls.Add(this.labelRateUs);
@@ -205,6 +211,7 @@
             this.buttonSend.TabIndex = 5;
             this.buttonSend.Text = "Enviar";
             this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
             // labelNumber
             // 
@@ -222,30 +229,55 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 432);
+            this.label1.Location = new System.Drawing.Point(395, 420);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Estamos ansiosos por conocer tu opinión";
             // 
-            // textBoxNumber
+            // numericUpDown1
             // 
-            this.textBoxNumber.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBoxNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNumber.Location = new System.Drawing.Point(294, 475);
-            this.textBoxNumber.Name = "textBoxNumber";
-            this.textBoxNumber.Size = new System.Drawing.Size(260, 30);
-            this.textBoxNumber.TabIndex = 9;
+            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(294, 473);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
+            this.numericUpDown1.TabIndex = 12;
             // 
-            // listBox1
+            // listView1
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(177, 106);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(805, 308);
-            this.listBox1.TabIndex = 11;
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderRate,
+            this.columnHeaderDate,
+            this.columnHeaderReview});
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(185, 124);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(797, 244);
+            this.listView1.TabIndex = 13;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderRate
+            // 
+            this.columnHeaderRate.Text = "Calificación";
+            // 
+            // columnHeaderDate
+            // 
+            this.columnHeaderDate.Text = "Fecha";
+            // 
+            // columnHeaderReview
+            // 
+            this.columnHeaderReview.Text = "Reseña ";
+            this.columnHeaderReview.Width = 612;
             // 
             // FormReviews
             // 
@@ -253,8 +285,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(168)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(1182, 673);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.textBoxNumber);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelNumber);
             this.Controls.Add(this.buttonSend);
@@ -275,6 +307,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4Stars)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Stars)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Stars)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +329,10 @@
         private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.Label labelNumber;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxNumber;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeaderRate;
+        private System.Windows.Forms.ColumnHeader columnHeaderDate;
+        private System.Windows.Forms.ColumnHeader columnHeaderReview;
     }
 }
