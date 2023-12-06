@@ -117,16 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="labelAboutUs.Text" xml:space="preserve">
     <value>¿Quiénes somos?
-En FOCUS, nuestra pasión es inmortalizar tus momentos más preciados a través de la lente de la creatividad y profesionalidad. 
-Somos más que fotógrafos; somos narradores visuales que se esfuerzan por capturar la esencia única de cada ocasión especial.
+En FOCUS, nuestra pasión es inmortalizar tus momentos más preciados a través de 
+la lente de la creatividad y profesionalidad. 
+Somos más que fotógrafos; somos narradores visuales que se esfuerzan por capturar 
+la esencia única de cada ocasión especial.
 
 Nuestro compromiso: 
-En FOCUS, nos comprometemos a brindarte no solo fotografías excepcionales, sino también experiencias inolvidables. 
-Cada clic de nuestra cámara busca capturar la autenticidad, la emoción y la belleza de tus momentos más significativos. 
+En FOCUS, nos comprometemos a brindarte no solo fotografías excepcionales, 
+sino también experiencias inolvidables. 
+Cada clic de nuestra cámara busca capturar la autenticidad, 
+la emoción y la belleza de tus momentos más significativos. 
 
-Confía en nosotros para transformar tus momentos en recuerdos que durarán toda la vida. ¡Capturamos lo inolvidable!
+Confía en nosotros para transformar tus momentos en recuerdos 
+que durarán toda la vida. ¡Capturamos lo inolvidable!
 
 </value>
   </data>

@@ -18,12 +18,19 @@ namespace Poyecto_estudio
         int fotos;
         string paquete;
 
-        public FormOrder()
+        public FormOrder(bool admin)
         {
             InitializeComponent();
             tiposesion = 0;
             dateTimePicker.MinDate = DateTime.Now.AddDays(30);
             dateTimePicker.MaxDate = DateTime.Now.AddDays(183);
+            if (admin)
+            {
+                textBoxName.Enabled = false;
+                maskedTextBoxNumber.Enabled = false;
+                dateTimePicker.Enabled = false;
+                buttonOrder.Enabled = false;
+            }
             
         }
 

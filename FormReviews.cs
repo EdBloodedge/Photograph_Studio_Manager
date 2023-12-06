@@ -20,7 +20,7 @@ namespace Poyecto_estudio
         int rating;
         bool sendReview;
 
-        public FormReviews()
+        public FormReviews(bool admin)
         {
             InitializeComponent();
             rating = 0;
@@ -30,6 +30,10 @@ namespace Poyecto_estudio
             Stars.Add(pictureBox3Stars);
             Stars.Add(pictureBox4Stars);
             Stars.Add(pictureBox5Stars);
+            if(admin)
+            {
+                panel2.Enabled = false;
+            }
 
             ConnectionPostgreSQL connectionPostgreSQL = new ConnectionPostgreSQL();
 
