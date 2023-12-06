@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrder));
             this.buttonBoda = new System.Windows.Forms.Button();
             this.tableLayoutPanelButtons = new System.Windows.Forms.TableLayoutPanel();
             this.buttonXV = new System.Windows.Forms.Button();
@@ -46,11 +45,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelImage = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelBoda = new System.Windows.Forms.Panel();
-            this.panelXV = new System.Windows.Forms.Panel();
-            this.panelBautizo = new System.Windows.Forms.Panel();
-            this.panelRevelacion = new System.Windows.Forms.Panel();
             this.panelFamiliar = new System.Windows.Forms.Panel();
+            this.panelRevelacion = new System.Windows.Forms.Panel();
+            this.panelBautizo = new System.Windows.Forms.Panel();
+            this.panelXV = new System.Windows.Forms.Panel();
+            this.panelBoda = new System.Windows.Forms.Panel();
             this.tableLayoutPanelButtons.SuspendLayout();
             this.panelDetails.SuspendLayout();
             this.panelImage.SuspendLayout();
@@ -289,19 +288,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panelBoda
+            // panelFamiliar
             // 
-            this.panelBoda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBoda.BackgroundImage")));
-            this.panelBoda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panelBoda.Location = new System.Drawing.Point(465, 67);
-            this.panelBoda.Name = "panelBoda";
-            this.panelBoda.Size = new System.Drawing.Size(29, 19);
-            this.panelBoda.TabIndex = 21;
-            this.panelBoda.Visible = false;
+            this.panelFamiliar.BackgroundImage = global::Poyecto_estudio.Properties.Resources.WhatsApp_Image_2023_11_28_at_9_50_40_AM;
+            this.panelFamiliar.Location = new System.Drawing.Point(465, 167);
+            this.panelFamiliar.Name = "panelFamiliar";
+            this.panelFamiliar.Size = new System.Drawing.Size(29, 19);
+            this.panelFamiliar.TabIndex = 22;
+            this.panelFamiliar.Visible = false;
+            // 
+            // panelRevelacion
+            // 
+            this.panelRevelacion.BackgroundImage = global::Poyecto_estudio.Properties.Resources.WhatsApp_Image_2023_11_28_at_9_43_48_AM;
+            this.panelRevelacion.Location = new System.Drawing.Point(465, 142);
+            this.panelRevelacion.Name = "panelRevelacion";
+            this.panelRevelacion.Size = new System.Drawing.Size(29, 19);
+            this.panelRevelacion.TabIndex = 22;
+            this.panelRevelacion.Visible = false;
+            // 
+            // panelBautizo
+            // 
+            this.panelBautizo.BackgroundImage = global::Poyecto_estudio.Properties.Resources.WhatsApp_Image_2023_11_28_at_9_37_21_AM;
+            this.panelBautizo.Location = new System.Drawing.Point(465, 117);
+            this.panelBautizo.Name = "panelBautizo";
+            this.panelBautizo.Size = new System.Drawing.Size(29, 19);
+            this.panelBautizo.TabIndex = 22;
+            this.panelBautizo.Visible = false;
             // 
             // panelXV
             // 
-            this.panelXV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelXV.BackgroundImage")));
+            this.panelXV.BackgroundImage = global::Poyecto_estudio.Properties.Resources.WhatsApp_Image_2023_11_28_at_9_34_28_AM;
             this.panelXV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panelXV.Location = new System.Drawing.Point(465, 92);
             this.panelXV.Name = "panelXV";
@@ -309,32 +325,15 @@
             this.panelXV.TabIndex = 22;
             this.panelXV.Visible = false;
             // 
-            // panelBautizo
+            // panelBoda
             // 
-            this.panelBautizo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelBautizo.BackgroundImage")));
-            this.panelBautizo.Location = new System.Drawing.Point(465, 117);
-            this.panelBautizo.Name = "panelBautizo";
-            this.panelBautizo.Size = new System.Drawing.Size(29, 19);
-            this.panelBautizo.TabIndex = 22;
-            this.panelBautizo.Visible = false;
-            // 
-            // panelRevelacion
-            // 
-            this.panelRevelacion.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelRevelacion.BackgroundImage")));
-            this.panelRevelacion.Location = new System.Drawing.Point(465, 142);
-            this.panelRevelacion.Name = "panelRevelacion";
-            this.panelRevelacion.Size = new System.Drawing.Size(29, 19);
-            this.panelRevelacion.TabIndex = 22;
-            this.panelRevelacion.Visible = false;
-            // 
-            // panelFamiliar
-            // 
-            this.panelFamiliar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelFamiliar.BackgroundImage")));
-            this.panelFamiliar.Location = new System.Drawing.Point(465, 167);
-            this.panelFamiliar.Name = "panelFamiliar";
-            this.panelFamiliar.Size = new System.Drawing.Size(29, 19);
-            this.panelFamiliar.TabIndex = 22;
-            this.panelFamiliar.Visible = false;
+            this.panelBoda.BackgroundImage = global::Poyecto_estudio.Properties.Resources.WhatsApp_Image_2023_11_28_at_9_33_10_AM;
+            this.panelBoda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelBoda.Location = new System.Drawing.Point(465, 67);
+            this.panelBoda.Name = "panelBoda";
+            this.panelBoda.Size = new System.Drawing.Size(29, 19);
+            this.panelBoda.TabIndex = 21;
+            this.panelBoda.Visible = false;
             // 
             // FormOrder
             // 

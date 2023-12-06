@@ -24,7 +24,8 @@ namespace Poyecto_estudio
 
         private void buttonOrder_Click(object sender, EventArgs e)
         {
-            FormOrder formOrder = new FormOrder();
+
+            FormOrder formOrder = new FormOrder(admin);
             OpenChildForm(formOrder);
 
         }
@@ -40,7 +41,7 @@ namespace Poyecto_estudio
         private void buttonReviews_Click(object sender, EventArgs e)
         {
 
-            FormReviews formReviews = new FormReviews();
+            FormReviews formReviews = new FormReviews(admin);
             OpenChildForm(formReviews);
         }
 
@@ -76,13 +77,28 @@ namespace Poyecto_estudio
 
             if (!admin)
             {
+                FormPassword formPassword = new FormPassword();
+                formPassword.ShowDialog();
+
+                if (!formPassword.pass)
+                {
+                    MessageBox.Show("Contraseña incorrecta.");
+                    return;
+                }
+
                 admin = true;
                 buttonAdmin.Text = "Salir Admin";
+                buttonOrder.Text = "Paquetes";
+                buttonHistory.Text = "Ver ordenes";
+                buttonReviews.Text = "Reseñas";
             }
             else
             {
                 admin = false;
                 buttonAdmin.Text = "Administrar";
+                buttonOrder.Text = "Pedir una sesión";
+                buttonHistory.Text = "Ver mi orden";
+                buttonReviews.Text = "Danos tu opinión";
             }
         }
     }

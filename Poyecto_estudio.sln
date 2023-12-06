@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poyecto_estudio", "Poyecto_estudio.csproj", "{8E37DDF7-C2A6-491F-BBB3-2747E60926E5}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FOCUS Admin", "..\FOCUS Admin\FOCUS Admin.vdproj", "{A6BA9954-99C3-4E70-A9B6-0A1D526F553F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{8E37DDF7-C2A6-491F-BBB3-2747E60926E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E37DDF7-C2A6-491F-BBB3-2747E60926E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E37DDF7-C2A6-491F-BBB3-2747E60926E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6BA9954-99C3-4E70-A9B6-0A1D526F553F}.Debug|Any CPU.ActiveCfg = Debug
+		{A6BA9954-99C3-4E70-A9B6-0A1D526F553F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
