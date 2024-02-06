@@ -78,7 +78,7 @@ namespace Poyecto_estudio
             fotos = 40;
             pictureBox1.BackgroundImage = panelFamiliar.BackgroundImage;
         }
-
+        
         private void buttonOrder_Click(object sender, EventArgs e)
         {
     
